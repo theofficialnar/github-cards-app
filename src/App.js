@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import CardList from './components/CardList';
+import Form from './components/Form';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	/* State */
+	const [title, _] = useState('Github Cards App');
+	const [profiles, setProfiles] = useState([]);
+
+	const addNewProfile = profileData => {
+		setProfiles(prevState => [...prevState, profileData])
+	};
+
+	return (
+		<main>
+			<div className="header">{title}</div>
+			<Form onSubmit={addNewProfile} />
+			<CardList profiles={profiles} />
+		</main>
+	);
 }
 
 export default App;

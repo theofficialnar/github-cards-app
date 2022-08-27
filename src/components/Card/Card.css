@@ -1,0 +1,29 @@
+.github-profile {
+    display: flex;
+}
+
+img {
+    margin-right: 20px;
+    width: 75px;
+    height: 75px;
+    border: 1px solid #ddd;
+    border-radius: 5%;
+}
+
+.info {
+    margin: 0;
+}
+
+.info .name {
+    font-size: large;
+    font-weight: bold;
+    margin: 0;
+}
+
+.info .company {
+    margin: 0;
+}
+
+a {
+    color: #000;
+}

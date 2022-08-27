@@ -1,0 +1,16 @@
+form {
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    padding: 20px;
+    background-color: #e4e4e4;
+    border-radius: 5px;
+}
+
+input {
+    margin-right: 5px;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
